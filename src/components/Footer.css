@@ -1,0 +1,92 @@
+
+.footer {
+  background-color: var(--interview-slate-900);
+  color: var(--white);
+  padding: 4rem 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.footer-brand {
+  grid-column: span 1;
+}
+
+.footer-brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-brand-description {
+  color: var(--interview-slate-300);
+  margin-bottom: 1.5rem;
+  max-width: 24rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social-link {
+  color: var(--interview-slate-300);
+  transition: color 0.3s;
+}
+
+.footer-social-link:hover {
+  color: var(--interview-blue-400);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.footer-links-column h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links-list {
+  list-style-type: none;
+}
+
+.footer-links-item {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links-item a {
+  color: var(--interview-slate-300);
+  transition: color 0.3s;
+}
+
+.footer-links-item a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--interview-slate-700);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer-copyright {
+  color: var(--interview-slate-400);
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .footer-bottom {
+    text-align: left;
+  }
+}

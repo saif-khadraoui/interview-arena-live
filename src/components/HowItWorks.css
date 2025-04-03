@@ -1,0 +1,105 @@
+
+.how-it-works {
+  padding: 5rem 0;
+  background-color: var(--interview-slate-50);
+}
+
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.how-it-works-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--interview-slate-900);
+  margin-bottom: 1rem;
+}
+
+.how-it-works-description {
+  font-size: 1.25rem;
+  color: var(--interview-slate-600);
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps-container {
+  position: relative;
+}
+
+.steps-connection-line {
+  display: none;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-icon {
+  background-color: var(--interview-blue-600);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--white);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--interview-slate-900);
+  margin-bottom: 0.75rem;
+}
+
+.step-description {
+  color: var(--interview-slate-600);
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-it-works-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .steps-connection-line {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 0.25rem;
+    background-color: var(--interview-blue-200);
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+}

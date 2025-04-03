@@ -1,0 +1,152 @@
+
+.pricing {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pricing-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--interview-slate-900);
+  margin-bottom: 1rem;
+}
+
+.pricing-description {
+  font-size: 1.25rem;
+  color: var(--interview-slate-600);
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: var(--white);
+  border: 1px solid var(--interview-slate-200);
+  border-radius: var(--border-radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.popular {
+  border-color: var(--interview-blue-500);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.pricing-card.popular::before {
+  content: "Most Popular";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--interview-blue-600);
+  color: var(--white);
+  padding: 0.25rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pricing-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--interview-slate-900);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card-description {
+  color: var(--interview-slate-600);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--interview-slate-900);
+}
+
+.pricing-card-period {
+  margin-left: 0.5rem;
+  color: var(--interview-slate-500);
+}
+
+.pricing-card-features {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.pricing-card-feature-icon {
+  color: var(--interview-blue-500);
+  margin-right: 0.75rem;
+}
+
+.pricing-card-feature-text {
+  color: var(--interview-slate-700);
+}
+
+.pricing-card-button {
+  background-color: var(--interview-blue-600);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card-button:hover {
+  background-color: var(--interview-blue-700);
+}
+
+.pricing-card.basic .pricing-card-button {
+  background-color: var(--white);
+  color: var(--interview-blue-600);
+  border: 1px solid var(--interview-blue-600);
+}
+
+.pricing-card.basic .pricing-card-button:hover {
+  background-color: var(--interview-blue-50);
+}
+
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,56 +1,57 @@
 
 import { Calendar, Users, Video, MessageSquare } from "lucide-react";
+import './HowItWorks.css';
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: <Users className="h-10 w-10 text-white" />,
+      icon: <Users />,
       title: "Create Your Profile",
       description: "Sign up and specify your industry, role, and experience level to find relevant interview partners."
     },
     {
-      icon: <Calendar className="h-10 w-10 text-white" />,
+      icon: <Calendar />,
       title: "Schedule a Session",
       description: "Book a time slot that works for both you and your matched interview partner."
     },
     {
-      icon: <Video className="h-10 w-10 text-white" />,
+      icon: <Video />,
       title: "Join the Interview",
       description: "Connect via our high-quality video platform and take turns interviewing each other."
     },
     {
-      icon: <MessageSquare className="h-10 w-10 text-white" />,
+      icon: <MessageSquare />,
       title: "Exchange Feedback",
       description: "Provide constructive feedback to help each other improve interview skills."
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-interview-slate-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-interview-slate-900 mb-4">
+    <section id="how-it-works" className="how-it-works">
+      <div className="container">
+        <div className="how-it-works-header">
+          <h2 className="how-it-works-title">
             How InterviewArena Works
           </h2>
-          <p className="text-xl text-interview-slate-600 max-w-2xl mx-auto">
+          <p className="how-it-works-description">
             A simple four-step process to help you practice and improve your interview skills.
           </p>
         </div>
 
-        <div className="relative">
+        <div className="steps-container">
           {/* Connection Line */}
-          <div className="absolute hidden md:block top-1/2 left-0 right-0 h-1 bg-interview-blue-200 -translate-y-1/2 z-0"></div>
+          <div className="steps-connection-line"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="steps-grid">
             {steps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="bg-interview-blue-600 w-20 h-20 rounded-full flex items-center justify-center mb-6 shadow-lg">
+              <div key={index} className="step">
+                <div className="step-icon">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-interview-slate-900 mb-3">
+                <h3 className="step-title">
                   {step.title}
                 </h3>
-                <p className="text-interview-slate-600">
+                <p className="step-description">
                   {step.description}
                 </p>
               </div>
